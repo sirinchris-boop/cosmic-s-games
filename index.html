@@ -1,48 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>My Project</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Game Hub</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Welcome to My Site</h1>
-      <p>Just like btc4animals — a clean, modern landing page.</p>
-      <a href="#about" class="btn">Learn More</a>
-    </div>
-  </header>
+  <aside class="sidebar">
+    <h2>🎮 Games</h2>
+    <nav>
+      <a href="#">🏠 Home</a>
+      <a href="#">🔥 Popular</a>
+      <a href="#">⭐ Favorites</a>
+    </nav>
+  </aside>
 
   <main>
-    <section id="about" class="section">
-      <h2>About This Site</h2>
-      <p>Write about your project, mission, or class goals here.</p>
-    </section>
+    <header>
+      <input type="text" id="search" placeholder="Search games..." />
+      <select id="sort">
+        <option value="az">Title (A–Z)</option>
+        <option value="za">Title (Z–A)</option>
+      </select>
+    </header>
 
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="https://picsum.photos/400/200" alt="">
-          <h3>Example Project</h3>
-          <p>Describe it here.</p>
-        </div>
+    <section class="game-grid" id="gameGrid">
+      <!-- Example games -->
+      <div class="game-card">
+        <img src="https://cdn.jsdelivr.net/gh/sirinchris-boop/assets/blackjack.jpg" alt="Blackjack" />
+        <h3>Jack Black 👍</h3>
+        <p>A card-based probability and decision-making simulation.</p>
       </div>
-    </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: your@email.com</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Your Name</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+      <div class="game-card">
+        <img src="https://cdn.jsdelivr.net/gh/sirinchris-boop/assets/ultrakill.jpg" alt="ULTRAKILL" />
+        <h3>ULTRAKILL</h3>
+        <p>A high-speed coordination and precision training challenge.</p>
+      </div>
