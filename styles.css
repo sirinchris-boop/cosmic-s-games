@@ -1,42 +1,10 @@
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: system-ui, sans-serif; color:#222; line-height:1.6; }
+const search = document.getElementById('search');
+const gameGrid = document.getElementById('gameGrid');
 
-.hero {
-  height: 70vh;
-  background: url('https://picsum.photos/1600/900') center/cover no-repeat;
-  position: relative;
-}
-.hero .overlay {
-  position: absolute; inset: 0; background: rgba(0,0,0,0.4);
-}
-.hero-content {
-  position: relative;
-  color: white;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #ff7a00;
-  color: white;
-  padding: .75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-}
-.btn:hover { background: #e86d00; }
-
-.section {
-  padding: 3rem 1rem;
-  max-width: 900px;
-  margin: auto;
-}
-.cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
-.card { background: #f8f8f8; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-.card img { width: 100%; }
-.card h3, .card p { padding: 1rem; }
-footer { text-align: center; padding: 2rem; background: #f0f0f0; color:#555; }
+search.addEventListener('input', () => {
+  const term = search.value.toLowerCase();
+  document.querySelectorAll('.game-card').forEach(card => {
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    card.style.display = title.includes(term) ? '' : 'none';
+  });
+});
