@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Game Hub</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
 </head>
 <body>
+  <!-- Sidebar -->
   <aside class="sidebar">
-    <h2>🎮 Games</h2>
-    <nav>
-      <a href="#">🏠 Home</a>
-      <a href="#">🔥 Popular</a>
-      <a href="#">⭐ Favorites</a>
-    </nav>
+    <a href="#" title="Home">🏠</a>
+    <a href="#" title="Popular">🔥</a>
+    <a href="#" title="Favorites">⭐</a>
   </aside>
 
+  <!-- Main content -->
   <main>
     <header>
       <input type="text" id="search" placeholder="Search games..." />
@@ -25,16 +25,32 @@
       </select>
     </header>
 
+    <!-- Game Grid -->
     <section class="game-grid" id="gameGrid">
-      <!-- Example games -->
       <div class="game-card">
-        <img src="https://cdn.jsdelivr.net/gh/sirinchris-boop/assets/blackjack.jpg" alt="Blackjack" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Blackjack_board.JPG" alt="Blackjack">
         <h3>Jack Black 👍</h3>
         <p>A card-based probability and decision-making simulation.</p>
       </div>
 
       <div class="game-card">
-        <img src="https://cdn.jsdelivr.net/gh/sirinchris-boop/assets/ultrakill.jpg" alt="ULTRAKILL" />
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1229490/header.jpg" alt="ULTRAKILL">
         <h3>ULTRAKILL</h3>
         <p>A high-speed coordination and precision training challenge.</p>
       </div>
+
+      <div class="game-card">
+        <img src="https://cdn.pixabay.com/photo/2016/03/31/19/13/boxing-1298232_960_720.png" alt="Boxing Random">
+        <h3>Boxing Random</h3>
+        <p>A randomized combat mechanics exploration for fun!</p>
+      </div>
+
+      <div class="game-card">
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/13/24/soccer-147951_960_720.png" alt="Soccer Game">
+        <h3>Soccer Random</h3>
+        <p>A fun and unpredictable soccer physics simulation.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
